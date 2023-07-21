@@ -1,0 +1,81 @@
+{
+	"info": {
+		"_postman_id": "f666e8b2-0c84-49b3-91e0-cda4788284a6",
+		"name": "Bootcamper endpoint",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28682015"
+	},
+	"item": [
+		{
+			"name": "Get Bootcampers List",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{endpoint}}/bootcampers",
+					"host": [
+						"{{endpoint}}"
+					],
+					"path": [
+						"bootcampers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Agregar bootcamper",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\":\"prueba\",\r\n    \"valor\":2.34\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{endpoint}}/bootcampers/",
+					"host": [
+						"{{endpoint}}"
+					],
+					"path": [
+						"bootcampers",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "endpoint",
+			"value": "http://localhost:8080",
+			"type": "string"
+		}
+	]
+}
